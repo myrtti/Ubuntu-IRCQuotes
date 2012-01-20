@@ -1,4 +1,25 @@
 \documentclass[a4paper]{book}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=blue           % color of external links
+}
 
 \title{IRCQuotes from the Abyss of Ubuntu}
 \author{Miia Ranta \and operators and users of Ubuntu IRC channels}
@@ -36,7 +57,10 @@ compiling them into this.
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \chapter{How it all began}
+
 \section*{its a carrot only white}
+\url{http://irclogs.ubuntu.com/2012/01/19/%23ubuntu.html#t22:31}
+
 \begin{verbatim}
 < shadaloo> ActionParsnip: hey it's trying to create an 8.5GB .iso
 < shadaloo> How can I get a 4.6ishGB .iso? ^^
@@ -95,6 +119,7 @@ And so this book, or file, or whatever you want to call it, began.
 
 \section*{constant buzz/hum I hear}
 
+\url{http://irclogs.ubuntu.com/2012/01/20/%23ubuntu.html#t00:55}
 \begin{verbatim}
 < CT1> Hi all.  Is there a package (or a feature in audacity) that 
   plays a certain tone... changeable (subtly) via a GUI slider?  I'm 
@@ -108,4 +133,8 @@ And so this book, or file, or whatever you want to call it, began.
   duly noted.  The subtle hint of it being a real question was 
   perhaps lost in it's "insanity"
 \end{verbatim}
+
+The discussion that followed included suggestions of coding an app that
+could do what was requested (a slider to adjust pitch) with PyGame, or
+setting up an Arduino board with a physical knob. \verb$*shakes head*$
 \end{document}
