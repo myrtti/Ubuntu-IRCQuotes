@@ -12,10 +12,10 @@
     pdfsubject={Ubuntu IRCQuotes},   % subject of the document
     pdfkeywords={ubuntu} {freenode} {irc} {quote}, % list of keywords
     pdfnewwindow=true,      % links in new window
-    colorlinks=true,       % false: boxed links; true: colored links
-    linkcolor=black,          % color of internal links
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links
     citecolor=black,        % color of links to bibliography
-    filecolor=black,      % color of file links
+    filecolor=black,        % color of file links
     urlcolor=blue           % color of external links
 }
 
@@ -25,15 +25,15 @@
 
 \begin{document}
 \maketitle{}
-\thispagestyle{empty}
-\cleardoublepage{}
+\thispagestyle{empty}      % no pagenumbering
+\cleardoublepage{}		   % empty page before preface
 
-\pagestyle{headings}
-\setcounter{page}{1}
-\pagenumbering{roman}
+\pagestyle{headings}	   % print headings on each page	
+\setcounter{page}{1}       % this page is first page
+\pagenumbering{roman}      % page numbers in roman numerals
 
-\subsection*{Preface}
-\addcontentsline{toc}{subsection}{Preface}
+\subsection*{Preface}      % do not number this heading
+\addcontentsline{toc}{subsection}{Preface} % include in toc
 
 Ubuntu IRC channels in freenode thrive to be helpful, family-friendly 
 and peaceful place to visit and get help for your problems related to 
@@ -49,8 +49,9 @@ compiling them into this.
 \\
 \\
 \today, Miia Ranta
-\tableofcontents
-\cleardoublepage
+
+\tableofcontents   % table of contents
+\cleardoublepage{} % begin from uneven page
 
 \setcounter{page}{1}
 \pagenumbering{arabic}
@@ -115,24 +116,5 @@ The next discussion followed elsewhere:
 And so this book, or file, or whatever you want to call it, began.
 \newpage{}
 
-\section*{constant buzz/hum I hear}
-
-\url{http://irclogs.ubuntu.com/2012/01/20/%23ubuntu.html#t00:55}
-\begin{verbatim}
-< CT1> Hi all.  Is there a package (or a feature in audacity) that 
-  plays a certain tone... changeable (subtly) via a GUI slider?  I'm 
-  interested in finding out the frequency of the (yes, I may be 
-  "mental") constant buzz/hum I hear.  It's essential in deciding if 
-  I should be "committed" or if the tone is related to UK AC 
-  frequency and its harmonics.
-< genesisbot> lol CTI
-< genesisbot> CT1*
-< CT1> genesisbot: Thankfully the humorous side of my question was 
-  duly noted.  The subtle hint of it being a real question was 
-  perhaps lost in it's "insanity"
-\end{verbatim}
-
-The discussion that followed included suggestions of coding an app that
-could do what was requested (a slider to adjust pitch) with PyGame, or
-setting up an Arduino board with a physical knob. \verb$*shakes head*$
+\input{ubuntu}	% include the file ubuntu.tex
 \end{document}
